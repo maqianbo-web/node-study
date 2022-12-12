@@ -1,0 +1,39 @@
+Content-Type是什么？
+在HTTP协议消息头中，使用Content-Type来表示媒体类型信息。它被用来告诉服务端如何处理请求的数据，以及告诉客户端（一般是浏览器）如何解析响应的数据，比如显示图片，解析html或仅仅展示一个文本等。
+
+Post请求的内容放置在请求体中，Content-Type定义了请求体的编码格式。数据发送出去后，还需要接收端解析才可以。接收端依靠请求头中的Content-Type字段来获知请求体的编码格式，最后再进行解析。
+
+Content-Type的格式
+Content-Type：type/subtype ;parameter
+
+type：主类型，任意的字符串，如text，如果是*号代表所有；
+subtype：子类型，任意的字符串，如html，如果是*号代表所有，用“/”与主类型隔开；
+parameter：可选参数，如charset，boundary等。
+例如：
+
+Content-Type: text/html;
+Content-Type: application/json;charset:utf-8;
+Content-Type: application/x-www-form-urlencoded;charset:utf-8;
+Post请求中常见的Content-Type类型的结构
+（1）application/x-www-form-urlencoded
+
+这是浏览器原生的form表单类型，或者说是表单默认的类型。
+
+下面是一个请求实例：
+
+
+
+请求报文：
+
+
+
+可以看得出，post将请求参数以key1=value1&key2=value2这种键值对的方式进行组织，并放入到请求体中。其中中文或某些特殊字符，如"/"、","、“:" 等会自动进行URL转码。
+
+（2）application/json
+
+现在绝大部分的请求都会以json形式进行传输，post会将序列化后的json字符串直接塞进请求体中。
+
+下面是一个请求实例：
+————————————————
+版权声明：本文为CSDN博主「SunAlwaysOnline」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_33591903/article/details/104036620

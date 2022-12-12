@@ -1,0 +1,32 @@
+Arguments: 
+  /Users/maqianbo/.volta/tools/image/node/16.15.0/bin/node /Users/maqianbo/.volta/tools/image/yarn/1.22.18/bin/yarn.js add @types/node -D
+
+PATH: 
+  /Users/maqianbo/.volta/tools/image/yarn/1.22.18/bin:/Users/maqianbo/.volta/tools/image/node/16.15.0/bin:/Users/maqianbo/.volta/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/maqianbo/.volta/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.15.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND r.npm.sankuai.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
+
+npm manifest: 
+  {
+    "name": "basic1",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
